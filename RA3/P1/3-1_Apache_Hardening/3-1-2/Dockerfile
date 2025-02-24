@@ -33,15 +33,12 @@ COPY ssl/configP1-ssl.conf /etc/apache2/sites-available/configP1-ssl.conf
 # Habilitar configuración SSL
 RUN a2ensite configP1-ssl
 
-######################################################################################## COPIAR ARCHIVO POST EN DIRECTORIO ROOT DOCKER 
-https://github.com/victorponz/Ciberseguridad-PePS/blob/master/php/validacion/post.php
+#COPIAR ARCHIVO POST EN DIRECTORIO ROOT DOCKER 
+#https://github.com/victorponz/Ciberseguridad-PePS/blob/master/php/validacion/post.php
+COPY html/post.php /var/www/html/p1/post.php
 
-
-#################################### COPIAR ARCHIVO DE SEGURIDAD PARA PODER USARLO
-
-#etc/modsecurity/modsecurity.conf-recommended              /etc/modsecurity/modsecurity.conf
-
-
+#COPIAR ARCHIVO DE SEGURIDAD PARA PODER USARLO
+RUN cp etc/modsecurity/modsecurity.conf-recommended /etc/modsecurity/modsecurity.conf
 
 # Exponer el puerto 443 para HTTPS
 EXPOSE 443
