@@ -1,10 +1,6 @@
-Para realizar este ejercicio, nos podemos bajar la imagen directamente de dockerhub sobre la que vamos a trabajar
+Para realizar este ejercicio, nos podemos bajar la imagen directamente de dockerhub 
 
-	docker pull pps10485285/ra3:3-1-1
-
-Podemos descargarnos la imagen ya finalizada 
-
-	INSERTAR ENLACE
+	docker pull pps10485285/ra3:3-1-2
 
 O ejecutar los siguientes comandos para construirla desde el Dockerfile facilitado:
 

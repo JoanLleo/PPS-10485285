@@ -4,7 +4,7 @@ FROM debian:latest
 RUN apt update && apt install -y apache2 openssl && rm -rf /var/lib/apt/lists/*
 
 # Instalar modulo de seguridad
-apt install libapache2-mod-security2 -y
+RUN apt install libapache2-mod-security2 -y
 
 # Deshabilitar módulo autoindex
 RUN a2dismod -f autoindex
