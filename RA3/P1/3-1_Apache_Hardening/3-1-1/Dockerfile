@@ -22,7 +22,7 @@ RUN openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
 COPY configP1-ssl.conf /etc/apache2/sites-available/configP1-ssl.conf
 
 # Habilitar configuración SSL
-RUN a2ensite default-ssl
+RUN a2ensite configP1-ssl
 
 # Exponer el puerto 443 para HTTPS
 EXPOSE 443
