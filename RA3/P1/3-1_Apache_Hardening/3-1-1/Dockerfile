@@ -26,6 +26,9 @@ RUN openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
 # Copiar configuración SSL desde el contexto del Dockerfile
 COPY ssl/configP1-ssl.conf /etc/apache2/sites-available/configP1-ssl.conf
 
+# Quitamos cabecera del servidor 
+RUN echo "ServerTokens ProductOnly" >> /etc/apache2/apache2.conf && echo "ServerSignature Off" >> /etc/apache2/apache2.conf
+
 # Habilitar configuración SSL
 RUN a2ensite configP1-ssl
 
