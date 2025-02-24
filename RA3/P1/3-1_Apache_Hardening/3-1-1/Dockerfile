@@ -12,6 +12,11 @@ RUN a2enmod headers ssl
 # Crear directorio para certificados SSL
 RUN mkdir -p /etc/apache2/ssl
 
+RUN mkdir /var/www/html/p1/
+
+#Copiar la pagina web a visualizar
+COPY html/index.html /var/www/html/p1/index.html
+
 # Generar un certificado autofirmado para HTTPS
 RUN openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
     -keyout /etc/apache2/ssl/apache.key \
