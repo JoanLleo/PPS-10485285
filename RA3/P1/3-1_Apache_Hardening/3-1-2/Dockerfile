@@ -1,10 +1,7 @@
 FROM debian:latest
 
 # Actualizamos paquetes e instalamos Apache y OpenSSL
-RUN apt update && apt install -y apache2 openssl && rm -rf /var/lib/apt/lists/*
-
-# Instalar modulo de seguridad
-RUN apt install libapache2-mod-security2 -y
+RUN apt update && apt install -y apache2 openssl libapache2-mod-security2 && rm -rf /var/lib/apt/lists/*
 
 # Deshabilitar módulo autoindex
 RUN a2dismod -f autoindex
