@@ -35,5 +35,5 @@ Verificar la cabecera CSP (Content-Security-Policy)
 
 	curl -I -k https://localhost:4443
 
-		Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'
+		Content-Security-Policy: default-src 'self'; script-src 'self'
 
