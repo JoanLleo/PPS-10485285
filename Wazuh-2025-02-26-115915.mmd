@@ -1,12 +1,14 @@
 ---
 config:
   layout: fixed
+  theme: redux
+  look: classic
 ---
 flowchart LR
     T["Implementación de Wazuh"] --> A["Preparación del Entorno"] & B["Instalación de Wazuh Indexer"] & C["Instalación del Servidor Wazuh"] & D["Instalación de Wazuh Dashboard"] & E["Implementación de Agentes Wazuh"] & F["Configuración de Monitoreo y Seguridad"] & G["Pruebas y Validación"] & H["Mantenimiento y Optimización"]
     A -- Definir requisitos --> A1["Hardware y Software"]
     A -- Configurar sistemas operativos --> A2["Ubuntu, CentOS, Debian, Windows"]
-    A -- Instalar dependencias --> A3["Java, curl, unzip, etc."]
+    A -- Instalar dependencias --> A3["curl, unzip, etc."]
     A -- Configurar firewall --> A4["Reglas y permisos"]
     B -- Descargar e instalar --> B1["Wazuh Indexer"]
     B -- Configurar clúster --> B2["Nodos en clúster"]
@@ -40,3 +42,4 @@ flowchart LR
     H -- Actualizar componentes --> H2["Wazuh y dependencias"]
     H -- Revisar logs --> H3["Solución de problemas"]
     H -- Agregar nuevos agentes --> H4["Crecimiento de la red"]
+    A2 --> n1["Untitled Node"]
